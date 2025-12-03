@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Symptom Checker Chatbot</h1>
+            <p class="disclaimer">This tool is for educational purposes only and is NOT medical advice. Always consult a qualified healthcare professional for real medical concerns.</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="input-section">
+                    <label for="symptom-input">Describe your symptoms:</label>
+                    <textarea 
+                        id="symptom-input" 
+                        placeholder="Example: I'm a 25 year old male with a high fever, bad cough, and I'm very tired."
+                        rows="4"
+                    ></textarea>
+                    <button id="submit-btn" onclick="submitSymptoms()">Get Diagnosis</button>
+                </div>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing symptoms...</p>
+                </div>
+
+                <div id="results" class="results hidden">
+                    <h2>Possible Diagnosis</h2>
+                    <div class="diagnosis-card">
+                        <div class="diagnosis-header">
+                            <span class="disease-name" id="best-disease"></span>
+                            <span class="confidence" id="best-confidence"></span>
+                        </div>
+                        <p class="disclaimer-small">This is a class project demo and not a substitute for a doctor.</p>
+                    </div>
+
+                    <div class="other-conditions">
+                        <h3>Other Possible Conditions:</h3>
+                        <ul id="other-conditions-list"></ul>
+                    </div>
+
+                    <div class="extracted-info">
+                        <h3>Extracted Information:</h3>
+                        <div id="extracted-features"></div>
+                    </div>
+
+                    <button id="clear-btn" onclick="clearResults()">Start New Diagnosis</button>
+                </div>
+
+                <div id="error" class="error hidden"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Educational AI Project - Symptom Checker</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
