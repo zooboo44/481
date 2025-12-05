@@ -9,9 +9,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
+from pathlib import Path
 
-DATA_PATH = "/home/zooboo/Documents/school/ai/chatbot2/dataset.csv"
-
+# DATA_PATH = "/home/zooboo/Documents/school/ai/chatbot2/dataset.csv"
+DATA_PATH = Path(__file__).parent / "dataset.csv"
 
 def load_data(path: str = DATA_PATH) -> pd.DataFrame:
     """
