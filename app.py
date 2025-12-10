@@ -85,6 +85,6 @@ if __name__ == '__main__':
     
     # Use debug mode only if FLASK_ENV is not set to production
     debug_mode = os.getenv('FLASK_ENV', 'development') != 'production'
-    port = int(os.getenv('PORT', 5000))  # Allow port to be configured via environment variable
+    port = int(os.getenv('PORT', 5050))  # Allow port to be configured via environment variable
     app.run(debug=debug_mode, host='0.0.0.0', port=port)
 
