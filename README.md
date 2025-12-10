@@ -37,4 +37,4 @@ Running Program:
 1. Run `app.py`
     python3 app.py
 
-2. Open `127.0.0.1:5050` in a browser
+2. Open `http://127.0.0.1:5050` in a browser
