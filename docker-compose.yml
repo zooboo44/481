@@ -7,14 +7,14 @@ services:
       dockerfile: Dockerfile
     container_name: chatbot-app
     ports:
-      - "8085:8085"
+      - "8125:8125"
     environment:
       - FLASK_ENV=production
       - PYTHONUNBUFFERED=1
-      - PORT=8085
+      - PORT=8125
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8085/api/health').read()"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8125/api/health').read()"]
       interval: 30s
       timeout: 10s
       retries: 3

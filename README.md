@@ -17,7 +17,7 @@ Running:
 1. cd into the directory
 2. run `docker compose up -d`
     - This builds the docker container and runs it on port `5051`
-3. Open `http://127.0.0.1:8085` in a browser
+3. Open `http://127.0.0.1:8125` in a browser
 
 
 
@@ -37,4 +37,4 @@ Running Program:
 1. Run `app.py`
     python3 app.py
 
-2. Open `http://127.0.0.1:8085` in a browser
+2. Open `http://127.0.0.1:8125` in a browser
