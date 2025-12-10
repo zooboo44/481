@@ -83,5 +83,8 @@ if __name__ == '__main__':
     except Exception as e:
         print(f"Error loading model: {e}")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Use debug mode only if FLASK_ENV is not set to production
+    debug_mode = os.getenv('FLASK_ENV', 'development') != 'production'
+    port = int(os.getenv('PORT', 5000))  # Allow port to be configured via environment variable
+    app.run(debug=debug_mode, host='0.0.0.0', port=port)
 
