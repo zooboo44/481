@@ -15,7 +15,7 @@ Prerequisites:
 
 Running:
 1. cd into the directory
-2. run `docker compose up -d`
+2. run `docker compose up --build`
     - This builds the docker container and runs it on port `5051`
 3. Open `http://127.0.0.1:8125` in a browser
 
