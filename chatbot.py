@@ -162,7 +162,7 @@ def parse_free_text_description(text: str) -> Dict[str, Any]:
     # Gender
     if any(w in text_lower for w in ["female", "woman", "girl", "feminine"]):
         info["Gender"] = "Female"
-    if any(w in text_lower for w in ["male", "man", "boy", "masculine"]):
+    elif any(w in text_lower for w in ["male", "man", "boy", "masculine"]):
         info["Gender"] = "Male"
 
     # Blood pressure (very rough keywords)
